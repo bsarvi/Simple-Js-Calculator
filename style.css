@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ccc;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: white;
+  width: 350px;
+  height: 95%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  overflow: hidden;
+}
+.display-container {
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  padding: 10px;
+}
+
+.display-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.overlay {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 5px;
+}
+
+.overlay .input {
+  font-size: 32px;
+  font-weight: 400;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-align: end;
+  color: #fff;
+}
+
+/* #input::before {
+  content: "fdfd";
+} */
+
+.overlay #output {
+  font-size: 24px;
+  color: #aaa;
+  height: 24px;
+}
+
+.buttons-container {
+  background-color: #f2f2f2;
+  flex-grow: 7;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+.btn:hover {
+  background-color: #004e92;
+  color: #fff;
+}
+
+.equalTo {
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  color: #fff;
+}
+
+.operator {
+  color: #004e92;
+}
+
+#clear {
+  color: red;
+}
+
+
+
+@keyframes blink-animation {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
